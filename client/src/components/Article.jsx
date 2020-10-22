@@ -10,7 +10,7 @@ export default function Article(props) {
           <h3>{currentArticle.author}</h3>
           <h5>{currentArticle.publication_date}</h5>
           <br />
-          <p>{currentArticle.text}</p>
+          <p>{currentArticle.body}</p>
           <br />
           <button onClick={() => {
             props.removeArticle(currentArticle.id)

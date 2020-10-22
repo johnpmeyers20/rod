@@ -1,36 +1,45 @@
 import React from 'react'
 
-export default function CatsEdit(props) {
+export default function ArticlesEdit(props) {
   return (
     <div>
       <form onSubmit={(e) => {
         e.preventDefault();
-        props.editSubmit(props.catId);
+        props.editSubmit(props.articleId);
       }}>
-        <label htmlFor="name">name</label>
+        <label htmlFor="title">title</label>
         <input
           type="text"
-          name="name"
-          id="name"
-          value={props.formData.name}
+          name="title"
+          id="title"
+          value={props.formData.title}
           onChange={props.handleChange}
         />
         <br />
-        <label htmlFor="breed">breed</label>
+        <label htmlFor="author">author</label>
         <input
           type="text"
-          name="breed"
-          id="breed"
-          value={props.formData.breed}
+          name="author"
+          id="author"
+          value={props.formData.author}
           onChange={props.handleChange}
         />
         <br />
-        <label htmlFor="img_url">image url</label>
+        <label htmlFor="publication_date">publication date</label>
         <input
           type="text"
-          name="img_url"
-          id="img_url"
-          value={props.formData.img_url}
+          name="publication_date"
+          id="publication_date"
+          value={props.formData.publication_date}
+          onChange={props.handleChange}
+        />
+        <br />
+        <label htmlFor="body">body</label>
+        <input
+          type="body"
+          name="body"
+          id="body"
+          value={props.formData.body}
           onChange={props.handleChange}
         />
         <br />
